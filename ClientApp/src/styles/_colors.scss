@@ -1,0 +1,214 @@
+// Neutral
+$neutral-color: (
+  white-1: #f2f2f2,
+  white-2: #e6e6e6,
+  white-3: #cccccc,
+  gray-1: #999999,
+  gray-2: #808080,
+  gray-3: #666666,
+  black-1: #4d4d4d,
+  black-2: #333333,
+  black-3: #1a1a1a
+);
+// Electric Blue
+$electric-blue-darkest: #0272c8;
+$electric-blue-darker: #0991fa;
+$electric-blue-base: #209cfc;
+$electric-blue-lighter: #86cafe;
+$electric-blue-lightest: #b8e0ff;
+$electric-blue: (
+  base-darkest: $electric-blue-darkest,
+  base-darker: $electric-blue-darker,
+  base: $electric-blue-base,
+  base-lighter: $electric-blue-lighter,
+  base-lightest: $electric-blue-lightest,
+  dark-darkest: mix($electric-blue-darkest, #000, 80),
+  dark-darker: mix($electric-blue-darker, #000, 80),
+  dark: mix($electric-blue-base, #000, 80),
+  dark-lighter: mix($electric-blue-lighter, #000, 80),
+  dark-lightest: mix($electric-blue-lightest, #000, 80),
+  pastel-darkest: mix($electric-blue-darkest, #fff, 50),
+  pastel-darker: mix($electric-blue-darker, #fff, 50),
+  pastel: mix($electric-blue-base, #fff, 50),
+  pastel-lighter: mix($electric-blue-lighter, #fff, 50),
+  pastel-lightest: mix($electric-blue-lightest, #fff, 50)
+);
+// Blue
+$blue-darkest: #10327b;
+$blue-darker: #1945a2;
+$blue-base: #385caa;
+$blue-lighter: #85a5e9;
+$blue-lightest: #acc5f9;
+$blue: (
+  base-darkest: $blue-darkest,
+  base-darker: $blue-darker,
+  base: $blue-base,
+  base-lighter: $blue-lighter,
+  base-lightest: $blue-lightest,
+  dark-darkest: mix($blue-darkest, #000, 80),
+  dark-darker: mix($blue-darker, #000, 80),
+  dark: mix($blue-base, #000, 80),
+  dark-lighter: mix($blue-lighter, #000, 80),
+  dark-lightest: mix($blue-lightest, #000, 80),
+  pastel-darkest: mix($blue-darkest, #fff, 50),
+  pastel-darker: mix($blue-darker, #fff, 50),
+  pastel: mix($blue-base, #fff, 50),
+  pastel-lighter: mix($blue-lighter, #fff, 50),
+  pastel-lightest: mix($blue-lightest, #fff, 50)
+);
+// Purple
+$purpur-darkest: #510b7b;
+$purpur-darker: #6c12a2;
+$purpur-base: #7d32aa;
+$purpur-lighter: #c280e9;
+$purpur-lightest: #dba8f9;
+$purpur: (
+  base-darkest: $purpur-darkest,
+  base-darker: $purpur-darker,
+  base: $purpur-base,
+  base-lighter: $purpur-lighter,
+  base-lightest: $purpur-lightest,
+  dark-darkest: mix($purpur-darkest, #000, 80),
+  dark-darker: mix($purpur-darker, #000, 80),
+  dark: mix($purpur-base, #000, 80),
+  dark-lighter: mix($purpur-lighter, #000, 80),
+  dark-lightest: mix($purpur-lightest, #000, 80),
+  pastel-darkest: mix($purpur-darkest, #fff, 50),
+  pastel-darker: mix($purpur-darker, #fff, 50),
+  pastel: mix($purpur-base, #fff, 50),
+  pastel-lighter: mix($purpur-lighter, #fff, 50),
+  pastel-lightest: mix($purpur-lightest, #fff, 50)
+);
+// Red
+$red-darkest: #b6060b;
+$red-darker: #f00f15;
+$red-base: #fc4045;
+$red-lighter: #fe8588;
+$red-lightest: #ffa7a9;
+$red: (
+  base-darkest: $red-darkest,
+  base-darker: $red-darker,
+  base: $red-base,
+  base-lighter: $red-lighter,
+  base-lightest: $red-lightest,
+  dark-darkest: mix($red-darkest, #000, 80),
+  dark-darker: mix($red-darker, #000, 80),
+  dark: mix($red-base, #000, 80),
+  dark-lighter: mix($red-lighter, #000, 80),
+  dark-lightest: mix($red-lightest, #000, 80),
+  pastel-darkest: mix($red-darkest, #fff, 50),
+  pastel-darker: mix($red-darker, #fff, 50),
+  pastel: mix($red-base, #fff, 50),
+  pastel-lighter: mix($red-lighter, #fff, 50),
+  pastel-lightest: mix($red-lightest, #fff, 50)
+);
+// Orange
+$orange-darkest: #b75506;
+$orange-darker: #f2730e;
+$orange-base: #fe9440;
+$orange-lighter: #ffbb85;
+$orange-lightest: #ffcea7;
+$orange: (
+  base-darkest: $orange-darkest,
+  base-darker: $orange-darker,
+  base: $orange-base,
+  base-lighter: $orange-lighter,
+  base-lightest: $orange-lightest,
+  dark-darkest: mix($orange-darkest, #000, 80),
+  dark-darker: mix($orange-darker, #000, 80),
+  dark: mix($orange-base, #000, 80),
+  dark-lighter: mix($orange-lighter, #000, 80),
+  dark-lightest: mix($orange-lightest, #000, 80),
+  pastel-darkest: mix($orange-darkest, #fff, 50),
+  pastel-darker: mix($orange-darker, #fff, 50),
+  pastel: mix($orange-base, #fff, 50),
+  pastel-lighter: mix($orange-lighter, #fff, 50),
+  pastel-lightest: mix($orange-lightest, #fff, 50)
+);
+// Yellow
+$yellow-darkest: #886900;
+$yellow-darker: #C59D10;
+$yellow-base: #FED340;
+$yellow-lighter: #FFDF6F;
+$yellow-lightest: #FFEDB1;
+$yellow: (
+  base-darkest: $yellow-darkest,
+  base-darker: $yellow-darker,
+  base: $yellow-base,
+  base-lighter: $yellow-lighter,
+  base-lightest: $yellow-lightest,
+  dark-darkest: mix($yellow-darkest, #000, 80),
+  dark-darker: mix($yellow-darker, #000, 80),
+  dark: mix($yellow-base, #000, 80),
+  dark-lighter: mix($yellow-lighter, #000, 80),
+  dark-lightest: mix($yellow-lightest, #000, 80),
+  pastel-darkest: mix($yellow-darkest, #fff, 75),
+  pastel-darker: mix($yellow-darker, #fff, 75),
+  pastel: mix($yellow-base, #fff, 75),
+  pastel-lighter: mix($yellow-lighter, #fff, 75),
+  pastel-lightest: mix($yellow-lightest, #fff, 75)
+);
+// Green
+$green-darkest: #0c9505;
+$green-darker: #15c40c;
+$green-base: #3cce34;
+$green-lighter: #82f27d;
+$green-lightest: #a9fca5;
+$green: (
+  base-darkest: $green-darkest,
+  base-darker: $green-darker,
+  base: $green-base,
+  base-lighter: $green-lighter,
+  base-lightest: $green-lightest,
+  dark-darkest: mix($green-darkest, #000, 80),
+  dark-darker: mix($green-darker, #000, 80),
+  dark: mix($green-base, #000, 80),
+  dark-lighter: mix($green-lighter, #000, 80),
+  dark-lightest: mix($green-lightest, #000, 80),
+  pastel-darkest: mix($green-darkest, #fff, 50),
+  pastel-darker: mix($green-darker, #fff, 50),
+  pastel: mix($green-base, #fff, 50),
+  pastel-lighter: mix($green-lighter, #fff, 50),
+  pastel-lightest: mix($green-lightest, #fff, 50)
+);
+// Teal
+$teal-darkest: #03756c;
+$teal-darker: #09948f;
+$teal-base: #279b97;
+$teal-lighter: #78e5e1;
+$teal-lightest: #a3f8f5;
+$teal: (
+  base-darkest: $teal-darkest,
+  base-darker: $teal-darker,
+  base: $teal-base,
+  base-lighter: $teal-lighter,
+  base-lightest: $teal-lightest,
+  dark-darkest: mix($teal-darkest, #000, 80),
+  dark-darker: mix($teal-darker, #000, 80),
+  dark: mix($teal-base, #000, 80),
+  dark-lighter: mix($teal-lighter, #000, 80),
+  dark-lightest: mix($teal-lightest, #000, 80),
+  pastel-darkest: mix($teal-darkest, #fff, 50),
+  pastel-darker: mix($teal-darker, #fff, 50),
+  pastel: mix($teal-base, #fff, 50),
+  pastel-lighter: mix($teal-lighter, #fff, 50),
+  pastel-lightest: mix($teal-lightest, #fff, 50)
+);
+// Primary Colors
+$primary-color: $red;
+// Toned Colors
+$toned-white-2: mix(
+  map-get($neutral-color, white-2),
+  map-get($primary-color, base),
+  97
+);
+$toned-black-2: mix(
+  map-get($neutral-color, black-2),
+  map-get($primary-color, base),
+  97
+);
+$toned-black-3: mix(
+  map-get($neutral-color, black-3),
+  map-get($primary-color, pastel),
+  94
+);

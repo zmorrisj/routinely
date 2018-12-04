@@ -1,0 +1,369 @@
+@import "_variables.scss";
+@import "bootstrap-override.scss";
+@media (max-width: 767px) {
+  // On small screens, the nav menu spans the full width of the screen. Leave a space for it.
+  .router-outlet.body-content {
+    padding-top: 50px;
+  }
+}
+
+/*
+** TAGS
+*/
+
+body {
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: neutral-color(white-2);
+  background: $toned-white-2;
+  color: neutral-color(black-3);
+}
+
+hr {
+  border: 0;
+  width: 96%;
+  height: 1px;
+  background-color: primary-color(base);
+}
+
+label {
+  font-weight: bold;
+}
+
+/*
+** TABS
+*/
+
+.nav-tabs .nav-link {
+  font-size: 1rem;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
+  background-color: neutral-color(white-1);
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  border-color: transparent;
+  transition: $slow-transition;
+  background-color: #fff;
+}
+
+/*
+** FORM CONTROLS
+*/
+
+.form-control {
+  line-height: 1;
+  border-color: neutral-color(white-3);
+  color: neutral-color(gray-3);
+}
+
+input:disabled,
+textarea:disabled {
+  color: neutral-color(gray-3);
+}
+
+.calendar-button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  .input-group-text {
+    height: 31px;
+    border-left: 0;
+  }
+}
+
+// Ensure the select control is the same height as other controls.
+select.form-control-sm:not([size]):not([multiple]),
+.input-group-sm>select.form-control:not([size]):not([multiple]),
+.input-group-sm>.input-group-prepend>select.input-group-text:not([size]):not([multiple]),
+.input-group-sm>.input-group-append>select.input-group-text:not([size]):not([multiple]),
+.input-group-sm>.input-group-prepend>select.btn:not([size]):not([multiple]),
+.input-group-sm>.input-group-append>select.btn:not([size]):not([multiple]) {
+  height: 29px;
+}
+
+// Gray out the bg of disabled DIVs acting like form-controls.
+.form-control:disabled,
+input:disabled {
+  background-color: $toned-white-2;
+  color: neutral-color(black-1); // Set opacity to override firefox default
+  opacity: 1;
+  &::placeholder {
+    color: neutral-color(black-1);
+  }
+}
+
+.async-validation-in-progress {
+  .warning-input,
+  .invalid-input,
+  .contains-invalid-inputs .ng-select .ng-select-container {
+    border: 2px solid yellow(base-darker);
+    margin: -2px;
+  }
+}
+
+.warning-input,
+.invalid-input,
+.contains-invalid-inputs .ng-select .ng-select-container {
+  border: 2px solid red(base);
+  margin: -2px;
+}
+
+.warning-input {
+  border-color: yellow(base-darker);
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: neutral-color(black-3);
+  background-color: rgba(primary-color(base), 0.1);
+}
+
+// disable the click events on things that are marked disabled
+.disabled {
+  &:active {
+    pointer-events: none;
+  }
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.dropdown-item.disabled,
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+input.form-control::placeholder {
+  color: neutral-color(gray-1);
+}
+
+// Checkbox Control
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 1em;
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0; // Create check inside checkbox
+    ~.checkbox-indicator {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: neutral-color(white-2);
+      border-radius: 20%;
+      border: 1px solid neutral-color(white-3);
+      &:after {
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 12px;
+        border: solid neutral-color(white-2);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        content: "";
+        position: absolute;
+      }
+    }
+    &:disabled~.checkbox-indicator {
+      cursor: not-allowed;
+    } // Not Disabled, Checked
+    &:not([disabled]):checked~.checkbox-indicator,
+    &:not([disabled]):checked:focus~.checkbox-indicator {
+      background: primary-color(base);
+      border-color: transparent;
+      &:after {
+        border-color: #fff;
+      }
+      &:hover {
+        background-color: primary-color(base-darker);
+      }
+    } // Not Disabled, Unchecked
+    &:not([disabled]):not(:checked)~.checkbox-indicator,
+    &:not([disabled]):not(:checked):focus~.checkbox-indicator {
+      background: neutral-color(white-2);
+      border-color: neutral-color(white-3);
+      &:after {
+        border-color: neutral-color(white-2);
+      }
+      &:hover {
+        background-color: neutral-color(white-3);
+        &:after {
+          border-color: #fff;
+        }
+      }
+    } // Disabled, Checked
+    &:disabled:checked~.checkbox-indicator,
+    &:disabled:checked:focus~.checkbox-indicator {
+      background: primary-color(pastel);
+      border-color: transparent;
+      &:after {
+        border-color: #fff;
+      }
+      &:hover {
+        background-color: primary-color(pastel);
+      }
+    } // Disabled, Unhecked
+    &:disabled:not(:checked)~.checkbox-indicator,
+    &:disabled:not(:checked):focus~.checkbox-indicator {
+      background: neutral-color(white-2);
+      border-color: neutral-color(white-3);
+      &:after {
+        border-color: neutral-color(white-2);
+      }
+      &:hover {
+        background-color: neutral-color(white-2);
+      }
+    }
+  }
+}
+
+// Date Picker Popout
+.ngb-dp-day {
+  outline: none;
+  & .btn-light {
+    background: #fff;
+    text-align: center;
+    display: inline-block;
+    &.focused {
+      background-color: neutral-color(white-2);
+      outline: none;
+    }
+    &.range,
+    &:hover {
+      background-color: primary-color(base);
+      color: #fff;
+    }
+    &.faded {
+      background-color: primary-color(pastel);
+    }
+  }
+}
+
+/*
+** LOADING BAR
+*/
+
+$loading-bar-color: orange(base);
+.ng-bar {
+  background-color: $loading-bar-color !important;
+}
+
+.ng-meteor {
+  box-shadow: $loading-bar-color 0px 0px 10px, $loading-bar-color 0px 0px 5px !important;
+}
+
+.ng-spinner-icon {
+  border-top-color: $loading-bar-color !important;
+  border-left-color: $loading-bar-color !important;
+}
+
+/*
+** MISCELLANEOUS
+*/
+
+.text-header {
+  padding-bottom: 0.5em;
+  margin: 0.5em 0.5em 1em 0.5em;
+  width: 100%;
+  border-bottom: 1px solid primary-color(base);
+}
+
+.spinner {
+  text-align: center;
+  font-size: 48px;
+  color: primary-color(base);
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.cursor-text {
+  cursor: text !important;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+.mt-6 {
+  margin-top: 5rem !important;
+}
+
+/*
+** POPOVER TOOLTIPS
+*/
+
+.popover {
+  width: 500px;
+  border: none;
+  box-shadow: 0 0 5px neutral-color(white-3);
+  & .arrow {
+    &::before {
+      border-color: transparent;
+    }
+    &::after {
+      border-left-color: neutral-color(gray-2);
+    }
+  }
+  & .popover-header {
+    color: neutral-color(white-1);
+    background-color: neutral-color(black-1);
+    border-color: neutral-color(black-1);
+    border-top-right-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+  }
+  & .popover-body {
+    min-height: 100px;
+    color: neutral-color(white-1);
+    background-color: neutral-color(gray-2);
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+}
+
+/*
+** PRINT STYLES
+*/
+
+@media print {
+  @page {
+    size: auto portrait;
+    margin: 1.27cm 1.905cm;
+  }
+  .no-print {
+    display: none;
+  }
+  html,
+  body {
+    background: transparent;
+    overflow: visible;
+    font-size: 14pt;
+    font-family: "Times New Roman", Times, serif;
+    color: #1a1a1a;
+    margin: 0;
+  }
+  hr {
+    page-break-after: always;
+  }
+}
+
+@media screen {
+  .no-print {
+    display: initial;
+  }
+}

@@ -1,0 +1,1346 @@
+@import "_variables.scss";
+
+/*
+**  GENERAL
+**  https://getbootstrap.com/docs/4.1/utilities/borders/
+*/
+
+.bg-primary {
+  background-color: electric-blue(base) !important;
+}
+.bg-secondary {
+  background-color: orange(base) !important;
+}
+.bg-success {
+  background-color: green(base-darker) !important;
+}
+.bg-danger {
+  background-color: red(base) !important;
+}
+.bg-warning {
+  background-color: yellow(base) !important;
+}
+.bg-info {
+  background-color: purpur(base) !important;
+}
+.bg-light {
+  background-color: neutral-color(white-1) !important;
+}
+.bg-dark {
+  background-color: neutral-color(black-1) !important;
+}
+.bg-white {
+  background-color: #fff !important;
+}
+.bg-black {
+  background-color: #000 !important;
+}
+
+/*
+**  TYPOGRAPHY
+**  https://getbootstrap.com/docs/4.1/content/typography/
+*/
+
+.text-muted {
+  color: neutral-color(gray-2) !important;
+}
+
+a {
+  color: electric-blue(base);
+  text-decoration: none;
+  &:active,
+  &:hover {
+    color: electric-blue(base-darker) ;
+    transition: $slow-transition;
+    text-decoration: underline;
+  }
+}
+
+.text-primary {
+  color: electric-blue(base) !important;
+}
+a.text-primary {
+  &:hover,
+  &:focus {
+    color: electric-blue(base-darker)  !important;
+  }
+}
+
+.text-secondary {
+  color: orange(base) !important;
+}
+a.text-secondary {
+  &:hover,
+  &:focus {
+    color: orange(base-darker) !important;
+  }
+}
+
+.text-success {
+  color: green(base-darker) !important;
+}
+a.text-success {
+  &:hover,
+  &:focus {
+    color: green(base-darkest) !important;
+  }
+}
+
+.text-danger {
+  color: red(base) !important;
+}
+a.text-danger {
+  &:hover,
+  &:focus {
+    color: red(base-darker) !important;
+  }
+}
+
+.text-warning {
+  color: yellow(base-darker) !important;
+}
+a.text-warning {
+  &:hover,
+  &:focus {
+    color: yellow(base-darkest) !important;
+  }
+}
+
+.text-info {
+  color: purpur(base) !important;
+}
+a.text-info {
+  &:hover,
+  &:focus {
+    color: purpur(base-darker) !important;
+  }
+}
+
+.text-light {
+  color: neutral-color(white-1) !important;
+}
+.text-dark {
+  color: neutral-color(black-3) !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+.text-black {
+  color: #000 !important;
+}
+
+/*
+**  BORDERS
+**  https://getbootstrap.com/docs/4.1/utilities/borders/
+*/
+
+.border-primary {
+  border-color: electric-blue(base) !important;
+}
+.border-secondary {
+  border-color: orange(base) !important;
+}
+.border-success {
+  border-color: green(base) !important;
+}
+.border-danger {
+  border-color: red(base) !important;
+}
+.border-warning {
+  border-color: yellow(base) !important;
+}
+.border-info {
+  border-color: purpur(base) !important;
+}
+.border-light {
+  border-color: neutral-color(white-2) !important;
+}
+.border-dark {
+  border-color: neutral-color(black-1) !important;
+}
+.border-white {
+  border-color: #fff !important;
+}
+.border-black {
+  border-color: #000 !important;
+}
+
+/*
+**  ALERTS
+**  https://getbootstrap.com/docs/4.1/components/alerts/
+*/
+
+.alert-primary {
+  color: electric-blue(dark-darkest);
+  border-color: electric-blue(pastel);
+  background-color: electric-blue(pastel-lightest);
+}
+.alert-secondary {
+  color: orange(dark-darkest);
+  border-color: orange(pastel);
+  background-color: orange(pastel-lightest);
+}
+.alert-success {
+  color: green(dark-darkest);
+  border-color: green(pastel);
+  background-color: green(pastel-lightest);
+}
+.alert-danger {
+  color: red(dark-darkest);
+  border-color: red(pastel);
+  background-color: red(pastel-lightest);
+}
+.alert-warning {
+  color: yellow(dark-darkest);
+  border-color: yellow(pastel);
+  background-color: yellow(pastel-lightest);
+}
+.alert-info {
+  color: purpur(dark-darkest);
+  border-color: purpur(pastel);
+  background-color: purpur(pastel-lightest);
+}
+.alert-light {
+  color: neutral-color(gray-2);
+  border-color: #fff;
+  background-color: #fff;
+}
+.alert-dark {
+  color: neutral-color(black-1);
+  border-color: neutral-color(white-3);
+  background-color: neutral-color(white-2);
+}
+
+/*
+**  BADGES
+**  https://getbootstrap.com/docs/4.1/components/badge/
+*/
+
+.badge-primary {
+  color: neutral-color(white-1);
+  background-color: electric-blue(base-darker) ;
+}
+.badge-secondary {
+  color: neutral-color(white-1);
+  background-color: orange(base-darker);
+}
+.badge-success {
+  color: neutral-color(white-1);
+  background-color: green(base-darkest);
+}
+.badge-danger {
+  color: neutral-color(white-1);
+  background-color: red(base-darker);
+}
+.badge-warning {
+  color: neutral-color(black-3);
+  background-color: yellow(base);
+}
+.badge-info {
+  color: neutral-color(white-1);
+  background-color: purpur(base);
+}
+.badge-light {
+  color: neutral-color(black-3);
+  background-color: neutral-color(white-1);
+}
+.badge-dark {
+  color: neutral-color(white-1);
+  background-color: neutral-color(black-3);
+}
+
+/*
+**  BUTTONS
+**  https://getbootstrap.com/docs/4.1/components/buttons/
+*/
+
+.btn {
+  border: 1px solid transparent;
+  &:hover {
+    transition: $slow-transition;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-primary,
+.show .btn-primary {
+  color: #fff;
+  border-color: transparent;
+  background-color: electric-blue(base);
+  &:disabled,
+  &.disabled {
+    color: #fff;
+    border-color: transparent;
+    background-color: electric-blue(base);
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: electric-blue(base-darkest);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: purpur(base-darker);
+    box-shadow: 0 0 0 0.2rem purpur(base-lightest);
+  }
+}
+
+.btn-outline-primary,
+.show .btn-outline-primary {
+  color: electric-blue(base);
+  border-color: electric-blue(base);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: electric-blue(base);
+    border: 1px solid electric-blue(base);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: electric-blue(base);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: purpur(base-darker);
+    box-shadow: 0 0 0 0.2rem purpur(base-lightest);
+  }
+}
+
+.btn-secondary,
+.show .btn-secondary {
+  color: #fff;
+  border-color: transparent;
+  background-color: orange(base);
+  &:disabled,
+  &.disabled {
+    color: #fff;
+    border-color: transparent;
+    background-color: orange(base);
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: orange(base-darker);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: orange(base-darker);
+    box-shadow: 0 0 0 0.2rem orange(base-lightest);
+  }
+}
+
+.btn-outline-secondary,
+.show .btn-outline-secondary {
+  color: orange(base);
+  border-color: orange(base);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: orange(base);
+    border: 1px solid orange(base);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: orange(base);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: orange(base);
+    box-shadow: 0 0 0 0.2rem orange(base-lightest);
+  }
+}
+
+.btn-success,
+.show .btn-success {
+  color: #fff;
+  border-color: transparent;
+  background-color: green(base-darker);
+  &:disabled,
+  &.disabled {
+    color: #fff;
+    border-color: transparent;
+    background-color: green(base-darker);
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: green(base-darkest);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: green(base-darkest);
+    box-shadow: 0 0 0 0.2rem green(base-lighter);
+  }
+}
+
+.btn-outline-success,
+.show .btn-outline-success {
+  color: green(base-darker);
+  border-color: green(base-darker);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: green(base-darker);
+    border: 1px solid green(base-darker);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: green(base);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: green(base);
+    box-shadow: 0 0 0 0.2rem green(base-lightest);
+  }
+}
+
+.btn-danger,
+.show .btn-danger {
+  color: #fff;
+  border-color: transparent;
+  background-color: red(base);
+  &:disabled,
+  &.disabled {
+    color: #fff;
+    border-color: transparent;
+    background-color: red(base);
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: red(base-darker);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: red(base-darker);
+    box-shadow: 0 0 0 0.2rem red(base-lightest);
+  }
+}
+
+.btn-outline-danger,
+.show .btn-outline-danger {
+  color: red(base-darker);
+  border-color: red(base-darker);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: red(base-darker);
+    border: 1px solid red(base-darker);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: red(base);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: red(base);
+    box-shadow: 0 0 0 0.2rem red(base-lightest);
+  }
+}
+
+.btn-warning,
+.show .btn-warning {
+  color: neutral-color(black-3);
+  border-color: transparent;
+  background-color:yellow(base);
+  &:disabled,
+  &.disabled {
+    color: neutral-color(black-3);
+    border-color: transparent;
+    background-color:yellow(base);
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: neutral-color(black-3);
+    border-color: transparent;
+    background-color: yellow(base-lighter);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: neutral-color(black-3);
+    border-color: transparent;
+    background-color: yellow(base-lighter);
+    box-shadow: 0 0 0 0.2rem yellow(pastel-lightest);
+  }
+}
+
+.btn-outline-warning,
+.show .btn-outline-warning {
+  color: yellow(base-darker);
+  border-color: yellow(base-darker);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: yellow(base-darker);
+    border: 1px solid yellow(base-darker);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: neutral-color(black-3);
+    border-color: transparent;
+    background-color:yellow(base);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: neutral-color(black-3);
+    border-color: transparent;
+    background-color: yellow(base-lighter);
+    box-shadow: 0 0 0 0.2rem yellow(pastel-lightest);
+  }
+}
+
+.btn-info,
+.show .btn-info {
+  color: #fff;
+  border-color: transparent;
+  background-color: purpur(base);
+  &:disabled,
+  &.disabled {
+    color: #fff;
+    border-color: transparent;
+    background-color: purpur(base);
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: purpur(base-darker);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: purpur(base-darker);
+    box-shadow: 0 0 0 0.2rem purpur(base-lightest);
+  }
+}
+
+.btn-outline-info,
+.show .btn-outline-info {
+  color: purpur(base-darker);
+  border-color: purpur(base-darker);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: purpur(base-darker);
+    border: 1px solid purpur(base-darker);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: purpur(base);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: purpur(base-darker);
+    box-shadow: 0 0 0 0.2rem purpur(base-lightest);
+  }
+}
+
+.btn-light,
+.show .btn-light {
+  color: neutral-color(gray-3);
+  border-color: transparent;
+  background-color: neutral-color(white-1);
+  &:disabled,
+  &.disabled {
+    color: neutral-color(gray-3);
+    border-color: transparent;
+    background-color: neutral-color(white-1);
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: neutral-color(black-2);
+    border-color: transparent;
+    background-color: neutral-color(white-3);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: neutral-color(black-2);
+    border-color: transparent;
+    background-color: neutral-color(white-3);
+    box-shadow: 0 0 0 0.2rem neutral-color(white-2);
+  }
+}
+
+.btn-outline-light,
+.show .btn-outline-light {
+  color: neutral-color(gray-1);
+  border-color: neutral-color(white-3);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: neutral-color(gray-1);
+    border: 1px solid neutral-color(white-3);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: neutral-color(black-3);
+    border-color: transparent;
+    background-color: neutral-color(white-3);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: neutral-color(black-3);
+    border-color: transparent;
+    background-color: neutral-color(white-3);
+    box-shadow: 0 0 0 0.2rem neutral-color(white-2);
+  }
+}
+
+.btn-dark,
+.show .btn-dark {
+  color: neutral-color(white-1);
+  border-color: transparent;
+  background-color: neutral-color(gray-3);
+  &:disabled,
+  &.disabled {
+    color: neutral-color(white-1);
+    border-color: transparent;
+    background-color: neutral-color(gray-3);
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: neutral-color(white-1);
+    border-color: transparent;
+    background-color: neutral-color(gray-1);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: neutral-color(white-1);
+    border-color: transparent;
+    background-color: neutral-color(gray-1);
+    box-shadow: 0 0 0 0.2rem neutral-color(white-3);
+  }
+}
+
+.btn-outline-dark,
+.show .btn-outline-dark {
+  color: neutral-color(gray-2);
+  border-color: neutral-color(gray-1);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: neutral-color(gray-2);
+    border: 1px solid neutral-color(gray-1);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: neutral-color(white-1);
+    border-color: transparent;
+    background-color: neutral-color(gray-3);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: neutral-color(white-1);
+    border-color: transparent;
+    background-color: neutral-color(gray-3);
+    box-shadow: 0 0 0 0.2rem neutral-color(white-3);
+  }
+}
+
+.btn-link {
+  color: electric-blue(base);
+  border-color: transparent;
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: electric-blue(base);
+    border-color: transparent;
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: electric-blue(base-darkest);
+    border-color: transparent;
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):active:focus {
+    color: electric-blue(base-darkest);
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.btn-outline-link {
+  color: electric-blue(base);
+  border-color: electric-blue(base);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: electric-blue(base);
+    border: 1px solid electric-blue(base);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: electric-blue(base);
+  }
+  &:not(:disabled):not(.disabled):active:focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: electric-blue(base);
+    box-shadow: 0 0 0 0.2rem electric-blue(base-lightest);
+  }
+}
+
+/*
+**  TABLES
+**  https://getbootstrap.com/docs/4.1/content/tables/
+*/
+
+.table {
+  & thead th {
+    border: 0;
+  }
+  & thead th,
+  & td {
+    vertical-align: middle;
+  }
+}
+
+// .table-hover tbody tr:hover,
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: rgba(electric-blue(base), 0.1);
+}
+
+// TABLE-PRIMARY
+.table {
+  // Apply At Table Level
+  &.table-primary {
+    background-color: electric-blue(pastel-lightest);
+    border-color: electric-blue(pastel);
+    color: electric-blue(dark-darkest);
+    & thead tr th,
+    & tbody tr td {
+      background-color: electric-blue(pastel-lightest);
+      border-color: electric-blue(pastel);
+      color: electric-blue(dark-darkest);
+    }
+    & thead tr th {
+      background-color: electric-blue(pastel);
+    }
+    &.table-hover {
+      & tbody tr:hover td,
+      &.table-striped tbody tr:hover:nth-of-type(odd) td {
+        background-color: electric-blue(pastel);
+      }
+    }
+    &.table-striped tbody tr:nth-of-type(odd) td {
+      background-color: electric-blue(pastel-lighter);
+    }
+  }
+  // Apply At Row Level
+  & thead tr.table-primary th,
+  & tbody tr.table-primary td {
+    background-color: electric-blue(pastel-lightest);
+    border-color: electric-blue(pastel);
+    color: electric-blue(dark-darkest);
+  }
+  &.table-hover thead tr.table-primary:hover,
+  &.table-hover tbody tr.table-primary:hover {
+    background-color: electric-blue(pastel-lightest);
+  }
+  &.table-hover thead tr.table-primary:hover > th,
+  &.table-hover tbody tr.table-primary:hover > td {
+    background-color: electric-blue(pastel)
+  }
+}
+
+// TABLE-SECONDARY
+.table {
+  // Apply At Table Level
+  &.table-secondary {
+    background-color: orange(pastel-lightest);
+    border-color: orange(pastel);
+    color: orange(dark-darkest);
+    & thead tr th,
+    & tbody tr td {
+      background-color: orange(pastel-lightest);
+      border-color: orange(pastel);
+      color: orange(dark-darkest);
+    }
+    & thead tr th {
+      background-color: orange(pastel);
+    }
+    &.table-hover {
+      & tbody tr:hover td,
+      &.table-striped tbody tr:hover:nth-of-type(odd) td {
+        background-color: orange(pastel);
+      }
+    }
+    &.table-striped tbody tr:nth-of-type(odd) td {
+      background-color: orange(pastel-lighter);
+    }
+  }
+  // Apply At Row Level
+  & thead tr.table-secondary th,
+  & tbody tr.table-secondary td {
+    background-color: orange(pastel-lightest);
+    border-color: orange(pastel);
+    color: orange(dark-darkest);
+  }
+  &.table-hover thead tr.table-secondary:hover,
+  &.table-hover tbody tr.table-secondary:hover {
+    background-color: orange(pastel-lightest);
+  }
+  &.table-hover thead tr.table-secondary:hover > th,
+  &.table-hover tbody tr.table-secondary:hover > td {
+    background-color: orange(pastel)
+  }
+}
+
+// TABLE-SUCCESS
+.table {
+  // Apply At Table Level
+  &.table-success {
+    background-color: green(pastel-lightest);
+    border-color: green(pastel);
+    color: green(dark-darkest);
+    & thead tr th,
+    & tbody tr td {
+      background-color: green(pastel-lightest);
+      border-color: green(pastel);
+      color: green(dark-darkest);
+    }
+    & thead tr th {
+      background-color: green(pastel);
+    }
+    &.table-hover {
+      & tbody tr:hover td,
+      &.table-striped tbody tr:hover:nth-of-type(odd) td {
+        background-color: green(pastel);
+      }
+    }
+    &.table-striped tbody tr:nth-of-type(odd) td {
+      background-color: green(pastel-lighter);
+    }
+  }
+  // Apply At Row Level
+  & thead tr.table-success th,
+  & tbody tr.table-success td {
+    background-color: green(pastel-lightest);
+    border-color: green(pastel);
+    color: green(dark-darkest);
+  }
+  &.table-hover thead tr.table-success:hover,
+  &.table-hover tbody tr.table-success:hover {
+    background-color: green(pastel-lightest);
+  }
+  &.table-hover thead tr.table-success:hover > th,
+  &.table-hover tbody tr.table-success:hover > td {
+    background-color: green(pastel)
+  }
+}
+
+// TABLE-DANGER
+.table {
+  // Apply At Table Level
+  &.table-danger {
+    background-color: red(pastel-lightest);
+    border-color: red(pastel);
+    color: red(dark-darkest);
+    & thead tr th,
+    & tbody tr td {
+      background-color: red(pastel-lightest);
+      border-color: red(pastel);
+      color: red(dark-darkest);
+    }
+    & thead tr th {
+      background-color: red(pastel);
+    }
+    &.table-hover {
+      & tbody tr:hover td,
+      &.table-striped tbody tr:hover:nth-of-type(odd) td {
+        background-color: red(pastel);
+      }
+    }
+    &.table-striped tbody tr:nth-of-type(odd) td {
+      background-color: red(pastel-lighter);
+    }
+  }
+  // Apply At Row Level
+  & thead tr.table-danger th,
+  & tbody tr.table-danger td {
+    background-color: red(pastel-lightest);
+    border-color: red(pastel);
+    color: red(dark-darkest);
+  }
+  &.table-hover thead tr.table-danger:hover,
+  &.table-hover tbody tr.table-danger:hover {
+    background-color: red(pastel-lightest);
+  }
+  &.table-hover thead tr.table-danger:hover > th,
+  &.table-hover tbody tr.table-danger:hover > td {
+    background-color: red(pastel)
+  }
+}
+
+// TABLE-WARNING
+.table {
+  // Apply At Table Level
+  &.table-warning {
+    background-color: yellow(pastel-lightest);
+    border-color: yellow(pastel);
+    color: yellow(dark-darkest);
+    & thead tr th,
+    & tbody tr td {
+      background-color: yellow(pastel-lightest);
+      border-color: yellow(pastel);
+      color: yellow(dark-darkest);
+    }
+    & thead tr th {
+      background-color: yellow(pastel);
+    }
+    &.table-hover {
+      & tbody tr:hover td,
+      &.table-striped tbody tr:hover:nth-of-type(odd) td {
+        background-color: yellow(pastel);
+      }
+    }
+    &.table-striped tbody tr:nth-of-type(odd) td {
+      background-color: yellow(pastel-lighter);
+    }
+  }
+  // Apply At Row Level
+  & thead tr.table-warning th,
+  & tbody tr.table-warning td {
+    background-color: yellow(pastel-lightest);
+    border-color: yellow(pastel);
+    color: yellow(dark-darkest);
+  }
+  &.table-hover thead tr.table-warning:hover,
+  &.table-hover tbody tr.table-warning:hover {
+    background-color: yellow(pastel-lightest);
+  }
+  &.table-hover thead tr.table-warning:hover > th,
+  &.table-hover tbody tr.table-warning:hover > td {
+    background-color: yellow(pastel)
+  }
+}
+
+// TABLE-INFO
+.table {
+  // Apply At Table Level
+  &.table-info {
+    background-color: purpur(pastel-lightest);
+    border-color: purpur(pastel);
+    color: purpur(dark-darkest);
+    & thead tr th,
+    & tbody tr td {
+      background-color: purpur(pastel-lightest);
+      border-color: purpur(pastel);
+      color: purpur(dark-darkest);
+    }
+    & thead tr th {
+      background-color: purpur(pastel);
+    }
+    &.table-hover {
+      & tbody tr:hover td,
+      &.table-striped tbody tr:hover:nth-of-type(odd) td {
+        background-color: purpur(pastel)
+      }
+    }
+    &.table-striped tbody tr:nth-of-type(odd) td {
+      background-color: purpur(pastel-lighter)
+    }
+  }
+  // Apply At Row Level
+  & thead tr.table-info th,
+  & tbody tr.table-info td {
+    background-color: purpur(pastel-lightest);
+    border-color: purpur(pastel);
+    color: purpur(dark-darkest);
+  }
+  &.table-hover thead tr.table-info:hover,
+  &.table-hover tbody tr.table-info:hover {
+    background-color: purpur(pastel-lightest);
+  }
+  &.table-hover thead tr.table-info:hover > th,
+  &.table-hover tbody tr.table-info:hover > td {
+    background-color: rgba(0, 0, 0, .075);
+  }
+}
+
+// TABLE-LIGHT
+.table {
+  // Apply At Table Level
+  &.table-light {
+    background-color: #fff;
+    border-color: #fff;
+    color: neutral-color(gray-2);
+    & thead tr,
+    & tbody tr {
+      background-color: #fff;
+      border-color: #fff;
+      color: neutral-color(gray-2);
+    }
+    & thead tr {
+      color: neutral-color(black-3);
+    }
+    &.table-hover {
+      & tbody tr:hover,
+      &.table-striped tbody tr:hover:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, .075);
+      }
+    }
+    &.table-striped tbody tr:nth-of-type(odd) {
+      background-color: rgba(0, 0, 0, .05);
+    }
+  }
+  // Apply At Row Level
+  & thead tr.table-light,
+  & tbody tr.table-light {
+    background-color: #fff;
+    border-color: #fff;
+    color: neutral-color(gray-2);
+  }
+  &.table-hover thead tr.table-light:hover,
+  &.table-hover tbody tr.table-light:hover {
+    background-color: #fff;
+  }
+  &.table-hover thead tr.table-light:hover > th,
+  &.table-hover tbody tr.table-light:hover > td {
+    background-color: rgba(0, 0, 0, .075);
+  }
+}
+
+// TABLE-DARK
+.table {
+  // Apply At Table Level
+  &.table-dark {
+    background-color: $toned-black-3;
+    border-color: $toned-black-2;
+    color: neutral-color(white-1);
+    & thead tr,
+    & tbody tr {
+      background-color: $toned-black-3;
+      border-color: $toned-black-2;
+      color: neutral-color(white-1);
+    }
+    &.table-hover {
+      & tbody tr:hover,
+      &.table-striped tbody tr:hover:nth-of-type(odd) {
+        background-color: rgba(255, 255, 255, .075);
+      }
+    }
+    &.table-striped tbody tr:nth-of-type(odd) {
+      background-color: rgba(255, 255, 255, .05);
+    }
+  }
+  // Apply At Row Level
+  & thead tr.table-dark,
+  & tbody tr.table-dark,
+  & thead tr.table-dark th,
+  & tbody tr.table-dark td {
+    background-color: $toned-black-3;
+    border-color: $toned-black-2;
+    color: neutral-color(white-1);
+  }
+  &.table-hover thead tr.table-dark:hover,
+  &.table-hover tbody tr.table-dark:hover {
+    background-color: $toned-black-3;
+  }
+  &.table-hover thead tr.table-dark:hover > th,
+  &.table-hover tbody tr.table-dark:hover > td {
+    background-color: rgba(255, 255, 255, .075);
+  }
+}
+
+/*
+** PAGINATION
+*/
+
+.page-item.active .page-link {
+  background-color: electric-blue(base);
+  border-color: electric-blue(base);
+}
+
+.page-link:hover {
+  background-color: neutral-color(white-1);
+  border-color: neutral-color(white-2);
+}
+
+/*
+** CARDS & MODALS
+*/
+
+.card {
+  border: none;
+}
+
+// Fix for card headers with buttons.
+.card-header span {
+  line-height: 37px;
+}
+
+.card-header-toggle {
+  cursor: pointer;
+  &:hover {
+    background: #fff;
+    transition: $slow-transition;
+  }
+}
+
+.card-columns .card {
+  margin-bottom: 1.25rem;
+}
+
+.card-header,
+.modal-header {
+  background: neutral-color(white-1);
+  border-color: electric-blue(base);
+  font-size: 1.1rem;
+}
+
+.card-footer,
+.modal-footer {
+  background-color: neutral-color(white-1);
+  border-color: neutral-color(white-2);
+}
+
+.modal-header .close:focus {
+  outline: none;
+}
+
+.modal-content {
+  border: none;
+}
+
+/*
+** DROPDOWNS
+*/
+
+.dropdown-item:hover {
+  cursor: pointer;
+}
+
+/*
+** IMAGES
+*/
+
+.img-thumbnail {
+  padding: 1.25em;
+}
+
+/*
+**  OPTIONAL PRIMARY COLOR OVERRIDES 
+*/
+
+.bg-primary {
+  background-color: primary-color(base) !important;
+}
+a {
+  color: primary-color(base);
+  text-decoration: none;
+  &:active,
+  &:hover {
+    color: primary-color(base-darker);
+    transition: $slow-transition;
+    text-decoration: underline;
+  }
+}
+.text-primary {
+  color: primary-color(base) !important;
+}
+a.text-primary {
+  &:hover,
+  &:focus {
+    color: primary-color(base-darker) !important;
+  }
+}
+.border-primary {
+  border-color: primary-color(base) !important;
+}
+.alert-primary {
+  color: primary-color(dark-darkest);
+  border-color: primary-color(pastel);
+  background-color: primary-color(pastel-lightest);
+}
+.badge-primary {
+  color: #fff;
+  background-color: primary-color(base-darker);
+}
+.btn-primary,
+.show .btn-primary {
+  color: #fff;
+  border-color: transparent;
+  background-color: primary-color(base);
+  &:disabled,
+  &.disabled {
+    color: #fff;
+    border-color: transparent;
+    background-color: primary-color(base);
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: primary-color(base-darkest);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: purpur(base-darker);
+    box-shadow: 0 0 0 0.2rem purpur(base-lightest);
+  }
+}
+.btn-outline-primary,
+.show .btn-outline-primary {
+  color: primary-color(base);
+  border-color: primary-color(base);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: primary-color(base);
+    border: 1px solid primary-color(base);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: primary-color(base);
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &.dropdown-toggle:not(:disabled):not(.disabled):active,
+  &.dropdown-toggle:not(:disabled):not(.disabled):focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: purpur(base-darker);
+    box-shadow: 0 0 0 0.2rem purpur(base-lightest);
+  }
+}
+.btn-link {
+  color: primary-color(base);
+  border-color: transparent;
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: primary-color(base);
+    border-color: transparent;
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: primary-color(base-darkest);
+    border-color: transparent;
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):active:focus {
+    color: primary-color(base-darkest);
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+.btn-outline-link {
+  color: primary-color(base);
+  border-color: primary-color(base);
+  background-color: transparent;
+  &:disabled,
+  &.disabled {
+    color: primary-color(base);
+    border: 1px solid primary-color(base);
+    background-color: transparent;
+  }
+  &:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    border-color: transparent;
+    background-color: primary-color(base);
+  }
+  &:not(:disabled):not(.disabled):active:focus {
+    color: #fff;
+    border-color: transparent;
+    background-color: primary-color(base);
+    box-shadow: 0 0 0 0.2rem primary-color(base-lightest);
+  }
+}
+
+// .table-hover tbody tr:hover,
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: rgba(primary-color(base), 0.1);
+}
+.table-primary,
+.table-hover .table-primary {
+  color: primary-color(dark-darkest);
+  border-color: primary-color(pastel-lighter);
+  background-color: primary-color(pastel-lightest);
+  &:hover {
+    background-color: primary-color(pastel-lighter);
+    & > th {
+      background-color: primary-color(pastel-lighter);
+    }
+    & > td {
+      background-color: primary-color(pastel-lighter);
+    }
+  }
+  & th {
+    color: primary-color(dark-darkest);
+    border-color: primary-color(pastel-lighter);
+    background-color: primary-color(pastel-lighter);
+    &:hover {
+      background-color: primary-color(pastel-lighter);
+    }
+  }
+  & td {
+    color: primary-color(dark-darkest);
+    border-color: primary-color(pastel-lighter);
+    background-color: primary-color(pastel-lightest);
+    &:hover {
+      background-color: primary-color(pastel-lighter);
+    }
+  }
+}
+.page-item.active .page-link {
+  background-color: primary-color(base);
+  border-color: primary-color(base);
+}
+.card-header,
+.modal-header {
+  border-color: primary-color(base);
+}

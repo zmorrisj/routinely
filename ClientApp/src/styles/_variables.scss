@@ -1,0 +1,87 @@
+@import "_colors.scss";
+$slow-transition: all 750ms ease;
+$fast-transition: all 300ms ease;
+
+/**
+ * Force the output to be as 'rgb()'
+ * Can call with a color argument, or RGB components.
+ * Eg: force-rgb($color) 
+ * Eg: force-rgb(255,255,0)
+ */
+@function force-rgb($args...) {
+  $color: if(length($args) == 1, nth($args, 1), rgb($args...));
+  @return unquote("rgb(#{red($color)}, #{green($color)}, #{blue($color)})");
+}
+
+// Clean Color Map Functions
+@function neutral-color($key) {
+  @if map-has-key($neutral-color, $key) {
+    @return map-get($neutral-color, $key);
+  }
+  @warn "Unknown `#{$key}` in $neutral-color.";
+  @return null;
+}
+
+@function electric-blue($key) {
+  @if map-has-key($electric-blue, $key) {
+    @return map-get($electric-blue, $key);
+  }
+  @warn "Unknown `#{$key}` in $electric-blue.";
+  @return null;
+}
+
+@function purpur($key) {
+  @if map-has-key($purpur, $key) {
+    @return map-get($purpur, $key);
+  }
+  @warn "Unknown `#{$key}` in $purpur.";
+  @return null;
+}
+
+@function red($key) {
+  @if map-has-key($red, $key) {
+    @return map-get($red, $key);
+  }
+  @warn "Unknown `#{$key}` in $red.";
+  @return null;
+}
+
+@function orange($key) {
+  @if map-has-key($orange, $key) {
+    @return map-get($orange, $key);
+  }
+  @warn "Unknown `#{$key}` in $orange.";
+  @return null;
+}
+
+@function yellow($key) {
+  @if map-has-key($yellow, $key) {
+    @return map-get($yellow, $key);
+  }
+  @warn "Unknown `#{$key}` in $yellow.";
+  @return null;
+}
+
+@function green($key) {
+  @if map-has-key($green, $key) {
+    @return map-get($green, $key);
+  }
+  @warn "Unknown `#{$key}` in $green.";
+  @return null;
+}
+
+@function teal($key) {
+  @if map-has-key($teal, $key) {
+    @return map-get($teal, $key);
+  }
+  @warn "Unknown `#{$key}` in $teal.";
+  @return null;
+}
+
+@function primary-color($key) {
+  @if map-has-key($primary-color, $key) {
+    @return map-get($primary-color, $key);
+  }
+  @warn "Unknown `#{$key}` in $primary-color.";
+  @return null;
+}
