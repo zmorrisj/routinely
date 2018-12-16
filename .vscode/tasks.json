@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/routine-ly.csproj"
+                "${workspaceFolder}/routinely.csproj"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -17,7 +17,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/routine-ly.csproj"
+                "${workspaceFolder}/routinely.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

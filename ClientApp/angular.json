@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "routine-ly": {
+    "routinely": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/routine-ly",
+            "outputPath": "dist/routinely",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "routine-ly:build"
+            "browserTarget": "routinely:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "routine-ly:build:production"
+              "browserTarget": "routinely:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "routine-ly:build"
+            "browserTarget": "routinely:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "routine-ly-e2e": {
+    "routinely-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "routine-ly:serve"
+            "devServerTarget": "routinely:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "routine-ly:serve:production"
+              "devServerTarget": "routinely:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "routine-ly"
+  "defaultProject": "routinely"
 }
