@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CookingSkillService } from 'src/services/cooking-skill.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'routine.ly';
+
+  public title: string = 'routine.ly';
+
+  public recipes: Array<any>;
+
+  constructor(
+    private _cookingSkillService: CookingSkillService
+  ) { }
+
+  ngOnInit() {
+    this.recipes = this._cookingSkillService.getRecipes();
+  }
+
 }
