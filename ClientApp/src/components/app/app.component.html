@@ -1,28 +1,32 @@
-<div class="fluid-container">
+<div class="container-fluid container-max-width my-5">
   <div class="row">
     <div class="col-12">
-      <div class="navbar">
-        <h3 class="m-0 p-0">Welcome to {{ title }}!</h3>
+      <div class="row">
+        <div class="col-12">
+          <div class="navbar bg-primary rounded-top">
+            <h3 class="m-0 p-3 text-center">The Sims Cooking Skill Calculator</h3>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-12">
           <div class="table-responsive">
-            <table class="table table-striped table-hover table-primary">
+            <table class="table table-striped table-hover table-primary rounded-bottom">
               <thead>
                 <tr>
                   <th style="width: 10%;">Recipe ID</th>
                   <th style="width: 10%;">Difficulty</th>
                   <th style="width: 20%;">Recipe</th>
-                  <th style="width: 60%;">Is Cookable</th>
+                  <th style="width: 60%;">Unlocked</th>
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let recipe of recipes; let i = index">
-                  <td>{{recipe.recipeId}}</td>
+                  <td [ngClass]="{'rounded-left': i === maxIndex}">{{recipe.recipeId}}</td>
                   <td>{{recipe.difficulty}}</td>
                   <td>{{recipe.name}}</td>
-                  <td>
-                    <div class="btn-group">
+                  <td [ngClass]="{'rounded-right': i === maxIndex}">
+                    <div class=" btn-group">
                       <button [ngClass]="recipe.isCookable ? 'btn-success' : 'btn-light'"
                         (click)="changeResponse(true, i)" class="btn btn-sm">Yes</button>
                       <button [ngClass]="recipe.isCookable ? 'btn-light' : 'btn-danger'"
@@ -37,8 +41,9 @@
       </div> <!-- /.row -->
       <div class="row">
         <div class="col-11 offset-1">
-          <button class="btn btn-info my-3" (click)="calculateCookingSkill()">Calculate Cooking Skill</button>
-          <button class="btn btn-outline-light ml-3" (click)="resetCookingSkill()">Reset</button>
+          <button class="btn btn-secondary my-3" (click)="calculateCookingSkill()">Calculate Cooking
+            Skill</button>
+          <button class="btn btn-outline-primary ml-3" (click)="resetCookingSkill()">Reset</button>
         </div> <!-- /.col-12 -->
       </div> <!-- /.row -->
       <div class="row">

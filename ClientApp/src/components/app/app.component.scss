@@ -1,0 +1,6 @@
+.container-max-width {
+  // Warning: max-width: min-content is under development
+  // If infeasible, use max-width: 423px to emulate
+  // Working on Chrome as of 2019-04-04
+  max-width: min-content;
+}
