@@ -4,10 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../../app-routing.module';
 import { AppComponent } from './app.component';
 import { CookingSkillService } from 'src/services/cooking-skill.service';
+import { CookingSkillComponent } from '../cooking-skill.component/cooking-skill.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CookingSkillComponent
   ],
   imports: [
     BrowserModule,
