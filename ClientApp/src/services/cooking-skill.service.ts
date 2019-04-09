@@ -1,9 +1,20 @@
 import { Injectable } from '@angular/core';
+import { Location } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Recipe } from 'src/components/recipeModels';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CookingSkillService {
+
+  constructor(
+    private readonly BrowserLocation: Location,
+    private readonly Connection: HttpClient
+  ) { }
+
+  public Place = 'api/Recipe';
 
   getRecipes() {
     return [
@@ -67,6 +78,19 @@ export class CookingSkillService {
       { 'recipeId': 48, 'difficulty': 10, 'name': 'Tuna Casserole', 'isCookable': false },
       { 'recipeId': 49, 'difficulty': 10, 'name': 'Roast Chicken', 'isCookable': false },
     ];
+  }
+
+  public getFromDataberse(): Observable<Array<Recipe>> {
+    return this.Connection.get<Array<Recipe>>(
+      this.BrowserLocation.prepareExternalUrl(this.Place + '/Get')
+    );
+  }
+
+  public CalculateSkill(recipes: Array<Recipe>): Observable<number> {
+    return this.Connection.post<number>(
+      this.BrowserLocation.prepareExternalUrl(this.Place + '/Calc'),
+      recipes
+    );
   }
 
 }
