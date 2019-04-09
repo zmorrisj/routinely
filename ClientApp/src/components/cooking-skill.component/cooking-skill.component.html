@@ -19,11 +19,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let recipe of recipes; let i = index">
-              <td [ngClass]="{'rounded-left': i === maxIndex}">{{recipe.recipeId}}</td>
+            <tr *ngFor="let recipe of recipes; let i = index;">
+              <td [ngClass]="{'rounded-left': i === recipes.length - 1}">{{recipe.recipeId}}</td>
               <td>{{recipe.difficulty}}</td>
               <td>{{recipe.name}}</td>
-              <td [ngClass]="{'rounded-right': i === maxIndex}">
+              <td [ngClass]="{'rounded-right': i === recipes.length - 1}">
                 <div class=" btn-group">
                   <button [ngClass]="recipe.isCookable ? 'btn-success' : 'btn-light'" (click)="changeResponse(true, i)"
                     class="btn btn-sm">Yes</button>

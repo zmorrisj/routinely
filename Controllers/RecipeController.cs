@@ -8,7 +8,7 @@ using routinely.Models;
 namespace routine_ly.Controllers
 {
     [Route("api/Recipe")]
-    public class SampleDataController : Controller
+    public class RecipeController : Controller
     {
         [HttpGet("Get")]
         public IActionResult GetRecipeList()
