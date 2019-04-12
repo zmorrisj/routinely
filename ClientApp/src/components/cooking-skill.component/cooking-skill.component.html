@@ -19,16 +19,18 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let recipe of recipes; let i = index;">
-              <td [ngClass]="{'rounded-left': i === recipes.length - 1}">{{recipe.recipeId}}</td>
-              <td>{{recipe.difficulty}}</td>
-              <td>{{recipe.name}}</td>
-              <td [ngClass]="{'rounded-right': i === recipes.length - 1}">
+            <tr *ngFor="let imgurPost of imgurAPI; let i = index;">
+              <td [ngClass]="{'rounded-left': i === imgurAPI.length - 1}">{{imgurPost}}</td>
+              <td>{{imgurPost}}</td>
+              <td>{{imgurPost}}</td>
+              <td [ngClass]="{'rounded-right': i === imgurAPI.length - 1}">
                 <div class=" btn-group">
-                  <button [ngClass]="recipe.isCookable ? 'btn-success' : 'btn-light'" (click)="changeResponse(true, i)"
+                  <!-- <button [ngClass]="imgurPost ? 'btn-success' : 'btn-light'" (click)="changeResponse(true, i)"
                     class="btn btn-sm">Yes</button>
-                  <button [ngClass]="recipe.isCookable ? 'btn-light' : 'btn-danger'" (click)="changeResponse(false, i)"
-                    class="btn btn-sm">No</button>
+                  <button [ngClass]="imgurPost ? 'btn-light' : 'btn-danger'" (click)="changeResponse(false, i)"
+                    class="btn btn-sm">No</button> -->
+                  <button [ngClass]="imgurPost ? 'btn-success' : 'btn-light'" class="btn btn-sm">Yes</button>
+                  <button [ngClass]="imgurPost ? 'btn-light' : 'btn-danger'" class="btn btn-sm">No</button>
                 </div> <!-- /.btn-group -->
               </td>
             </tr>
@@ -41,7 +43,8 @@
 </div> <!-- /.col-12 -->
 <div class="position-absolute footer-full-width">
   <div class="section-footer">
-    <button class="btn btn-secondary my-3" (click)="calculateCookingSkill()">
+    <!-- <button class="btn btn-secondary my-3" (click)="calculateCookingSkill()"> -->
+    <button class="btn btn-secondary my-3">
       Calculate Cooking Skill
     </button>
     <button class="btn btn-danger ml-3" (click)="resetCookingSkill()">

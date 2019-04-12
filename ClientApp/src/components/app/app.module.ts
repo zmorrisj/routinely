@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../../app-routing.module';
 import { AppComponent } from './app.component';
-import { CookingSkillService } from 'src/services/cooking-skill.service';
+import { ImgurAPIService } from 'src/services/imgur-api.service';
 import { CookingSkillComponent } from '../cooking-skill.component/cooking-skill.component';
 
 @NgModule({
@@ -17,7 +17,7 @@ import { CookingSkillComponent } from '../cooking-skill.component/cooking-skill.
     HttpClientModule
   ],
   providers: [
-    CookingSkillService
+    ImgurAPIService
   ],
   bootstrap: [
     AppComponent
