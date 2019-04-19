@@ -9,7 +9,9 @@ import { ImgurAPI } from '../imgurAPIModels';
 })
 export class CookingSkillComponent implements OnInit {
 
-  public imgurAPI: Array<ImgurAPI>;
+  public imgurAPIArray: Array<ImgurAPI>;
+
+  // public buttStuff: Number = this.imgurAPIArray[].ImgurAPI.;
 
   public cookingSkill = 0;
 
@@ -22,8 +24,8 @@ export class CookingSkillComponent implements OnInit {
   ngOnInit(): void {
     this._imgurAPIService.getImgurGalleryController()
       .subscribe(
-        (imgurGalleryPost: Array<ImgurAPI>) => {
-          this.imgurAPI = imgurGalleryPost;
+        (a: Array<ImgurAPI>) => {
+          this.imgurAPIArray = a;
         }
       );
   }

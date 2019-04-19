@@ -19,11 +19,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let imgurPost of imgurAPI; let i = index;">
-              <td [ngClass]="{'rounded-left': i === imgurAPI.length - 1}">{{imgurPost}}</td>
-              <td>{{imgurPost}}</td>
-              <td>{{imgurPost}}</td>
-              <td [ngClass]="{'rounded-right': i === imgurAPI.length - 1}">
+            <tr *ngFor="let imgurPost of imgurAPIArray; let i = index;">
+              <td [ngClass]="{'rounded-left': i === imgurAPIArray.length - 1}">{{imgurPost.recipeId}}</td>
+              <td>{{imgurPost.difficulty}}</td>
+              <td>{{imgurPost.name}}</td>
+              <td [ngClass]="{'rounded-right': i === imgurAPIArray.length - 1}">
                 <div class=" btn-group">
                   <!-- <button [ngClass]="imgurPost ? 'btn-success' : 'btn-light'" (click)="changeResponse(true, i)"
                     class="btn btn-sm">Yes</button>

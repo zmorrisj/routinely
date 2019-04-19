@@ -23,7 +23,8 @@ export class ImgurAPIService {
   }
 
   public getImgurGalleryController(): Observable<Array<ImgurAPI>> {
-    // console.log(this.Connection.get<Array<ImgurAPI>>(this.BrowserLocation.prepareExternalUrl(this.URLRoute + '/Get')));
+    // console.log(this.BrowserLocation);
+    // console.log(this.BrowserLocation.prepareExternalUrl(this.URLRoute + '/Get'));
     return this.Connection.get<Array<ImgurAPI>>(
       this.BrowserLocation.prepareExternalUrl(this.URLRoute + '/Get')
     );
