@@ -13,12 +13,12 @@ namespace routine_ly.Controllers
     [HttpGet("Get")]
     public IActionResult GetRecipeList()
     {
-      Console.WriteLine(Ok(new RecipeFactory().GetRecipes()));
-      return Ok(new RecipeFactory().GetRecipes());
+      Console.WriteLine(Ok(new ImgurAPIFactory().GetImgurPost()));
+      return Ok(new ImgurAPIFactory().GetImgurPost());
     }
 
     [HttpPost("post-imgur-gallery-tag")]
-    public IActionResult PostRecipeList([FromBody] IEnumerable<Recipe> recipes)
+    public IActionResult PostRecipeList([FromBody] IEnumerable<ImgurAPI> recipes)
     {
       return Ok(CookingSkill.Calculate(recipes));
     }

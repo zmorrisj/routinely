@@ -1,7 +1,3 @@
-// export class ImgurAPI {
-//     public ImgurAPI: ImgurAPI[];
-// }
-
 // export class RecipeListItem {
 //     public level: number;
 //     public recipeCount: number = 0;
