@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ImgurAPIService } from 'src/services/imgur-api.service';
-import { ImgurAPI } from '../imgurAPIModels';
+import { RoutinelyAPIService } from 'src/services/routinely-api.service';
+import { Routine } from '../RoutinelyAPIModels';
 
 @Component({
   selector: 'app-cooking-skill-component',
@@ -9,23 +9,21 @@ import { ImgurAPI } from '../imgurAPIModels';
 })
 export class CookingSkillComponent implements OnInit {
 
-  public imgurAPIArray: Array<ImgurAPI>;
-
-  // public buttStuff: Number = this.imgurAPIArray[].ImgurAPI.;
+  public Routines: Array<Routine>;
 
   public cookingSkill = 0;
 
   public cookingSkillBadgeClass = 'badge-light';
 
   constructor(
-    private _imgurAPIService: ImgurAPIService
+    private _routinelyAPIService: RoutinelyAPIService
   ) { }
 
   ngOnInit(): void {
-    this._imgurAPIService.getImgurGalleryController()
+    this._routinelyAPIService.getRoutinesController()
       .subscribe(
-        (a: Array<ImgurAPI>) => {
-          this.imgurAPIArray = a;
+        (a: Array<Routine>) => {
+          this.Routines = a;
         }
       );
   }

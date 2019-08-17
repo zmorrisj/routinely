@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../../app-routing.module';
 import { AppComponent } from './app.component';
-import { ImgurAPIService } from 'src/services/imgur-api.service';
+import { RoutinelyAPIService } from 'src/services/routinely-api.service';
 import { CookingSkillComponent } from '../cooking-skill.component/cooking-skill.component';
+import { RoutinesListComponent } from '../routines-list.component/routines-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CookingSkillComponent
+    CookingSkillComponent,
+    RoutinesListComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +19,7 @@ import { CookingSkillComponent } from '../cooking-skill.component/cooking-skill.
     HttpClientModule
   ],
   providers: [
-    ImgurAPIService
+    RoutinelyAPIService
   ],
   bootstrap: [
     AppComponent

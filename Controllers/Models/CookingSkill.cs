@@ -6,11 +6,11 @@ namespace routinely.Models
 {
   public class CookingSkill
   {
-    public static int Calculate(IEnumerable<ImgurAPI> imgurPost)
+    public static int Calculate(IEnumerable<Routine> routine)
     {
-      if (imgurPost is null || imgurPost.Count() == 0) { return 0; }
+      if (routine is null || routine.Count() == 0) { return 0; }
       var skills =
-       imgurPost
+       routine
            .GroupBy(r => r.difficulty)
            .Select(g => new SkillLevel(g.Key, g.ToList()));
 
@@ -39,7 +39,7 @@ namespace routinely.Models
       }
     }
 
-    public SkillLevel(int difficulty, IEnumerable<ImgurAPI> res)
+    public SkillLevel(int difficulty, IEnumerable<Routine> res)
     {
       this.Difficulty = difficulty;
       this.RecipeCount = res.Count();

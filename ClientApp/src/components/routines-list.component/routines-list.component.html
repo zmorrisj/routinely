@@ -1,0 +1,61 @@
+<div class="col-12">
+  <div class="row">
+    <div class="col-12">
+      <div class="navbar bg-primary rounded-top">
+        <h1 class="m-0 p-3 m-auto">routinely</h1>
+      </div> <!-- /.navbar .bg-primary .rounded-top -->
+    </div> <!-- /.col-12 -->
+  </div> <!-- /.row -->
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover table-primary rounded-bottom">
+          <thead>
+            <tr>
+              <th style="width: 10%;">Recipe ID</th>
+              <th style="width: 10%;">Difficulty</th>
+              <th style="width: 20%;">Recipe</th>
+              <th style="width: 60%;">Unlocked</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let imgurPost of imgurAPIArray; let i = index;">
+              <td [ngClass]="{'rounded-left': i === imgurAPIArray.length - 1}">{{imgurPost.recipeId}}</td>
+              <td>{{imgurPost.difficulty}}</td>
+              <td>{{imgurPost.name}}</td>
+              <td [ngClass]="{'rounded-right': i === imgurAPIArray.length - 1}">
+                <div class=" btn-group">
+                  <!-- <button [ngClass]="imgurPost ? 'btn-success' : 'btn-light'" (click)="changeResponse(true, i)"
+                    class="btn btn-sm">Yes</button>
+                  <button [ngClass]="imgurPost ? 'btn-light' : 'btn-danger'" (click)="changeResponse(false, i)"
+                    class="btn btn-sm">No</button> -->
+                  <button [ngClass]="imgurPost ? 'btn-success' : 'btn-light'" class="btn btn-sm">Yes</button>
+                  <button [ngClass]="imgurPost ? 'btn-light' : 'btn-danger'" class="btn btn-sm">No</button>
+                </div> <!-- /.btn-group -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div> <!-- /.table-responsive -->
+    </div> <!-- /.col-12 -->
+  </div> <!-- /.row -->
+  <router-outlet></router-outlet>
+</div> <!-- /.col-12 -->
+<div class="position-absolute footer-full-width">
+  <div class="section-footer">
+    <!-- <button class="btn btn-secondary my-3" (click)="calculateCookingSkill()"> -->
+    <button class="btn btn-secondary my-3">
+      Calculate Cooking Skill
+    </button>
+    <button class="btn btn-danger ml-3" (click)="resetCookingSkill()">
+      Set False
+    </button>
+    <button class="btn btn-success ml-3" (click)="resetCookingSkill(true)">
+      Set True
+    </button>
+    <div class="ml-3 d-inline-block">
+      <strong>Cooking Skill:</strong>&nbsp;<span class="badge"
+        [ngClass]="cookingSkillBadgeClass">{{cookingSkill}}</span>
+    </div> <!-- /.ml-3 .d-inline-block -->
+  </div> <!-- /.section-footer -->
+</div> <!-- /.position-absolute .footer-full-width -->
